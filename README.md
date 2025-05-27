@@ -1,3 +1,7 @@
+![](screenshots/monitor1.png)
+![](screenshots/wofi.png)
+![](screenshots/gaming.png)
+
 # Fonts used
 https://www.nerdfonts.com/font-downloads
 
