@@ -11,7 +11,7 @@
     "modules-right": [
         "clock","pulseaudio", 
         "backlight", "cpu", "memory",  
-        "battery", "disk", "temperature", "network"
+        "disk", "temperature", "battery", "network"
         //  ,"custom/uptime", "custom/updates", "tray"
     ],
 
