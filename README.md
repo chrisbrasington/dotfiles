@@ -6,6 +6,8 @@
   <img src="screenshots/banner.png" alt="Workspaces">
 </p>
 
+![](screenshots/busy.png)
+
 ![](screenshots/monitor1.png)
 ![](screenshots/wofi.png)
 ![](screenshots/gaming.png)
