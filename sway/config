@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+focus_follows_mouse no
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -19,9 +21,12 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu exec wofi --show run
+set $menu exec wofi --show drun
 
 include /etc/sway/config-vars.d/*
+
+gaps inner 4
+gaps outer 2
 
 ### Output configuration
 #
@@ -29,7 +34,13 @@ include /etc/sway/config-vars.d/*
 output * bg /home/chris/Pictures/wallpaper/current.png fill
 
 # white mouse cursor
-seat * xcursor_theme Bibata-Modern-Ice 12
+# seat * xcursor_theme Bibata-Modern-Ice 12
+seat * xcursor_theme Adwaita 24
+
+exec swayidle -w \
+  # timeout 300 'swaylock -f -c 000000' \
+  timeout 300 'systemctl suspend' \
+  # before-sleep 'swaylock -f -c 000000'
 
 #
 # Example configuration:
@@ -91,6 +102,8 @@ input "1739:30382:DLL0704:01_06CB:76AE_Touchpad" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+bindsym $mod+Shift+z exec systemctl suspend
 
     # Kill focused window
     bindsym $mod+Shift+q kill
